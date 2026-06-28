@@ -75,3 +75,16 @@ def replace_items():
 replace_items()
 print(items)
 # potion,shield,map,key
+
+# Question 7
+points = 3
+
+def add_points():
+    global points
+    points = points + 7
+    points = points * 2
+    print(points)
+
+add_points()
+print(points)
+# 20,20
