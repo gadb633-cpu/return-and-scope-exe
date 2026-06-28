@@ -50,4 +50,28 @@ def take_damage(damage):
 
 take_damage(30)
 print(health)
-# 100,75,100
+# 70,35,100
+
+# Question 5
+items = ["map", "key"]
+
+def add_item():
+    items.append("torch")
+    items.append("coin")
+    print(items)
+
+add_item()
+print(items)
+# map,key,torch,coin,map,key,torch,coin
+
+# Question 6
+items = ["map", "key"]
+
+def replace_items():
+    items = ["potion"]
+    items.append("shield")
+    print(items)
+
+replace_items()
+print(items)
+# potion,shield,map,key
