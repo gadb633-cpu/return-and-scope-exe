@@ -124,3 +124,28 @@ def outer():
 outer()
 print(coins)
 # 16,16,10
+
+# Question 10
+score = 1
+bag = ["key"]
+
+def outer():
+    score = 10
+    bag.append("map")
+
+    def inner():
+        nonlocal score
+        score = score + 5
+        bag.append("coin")
+        print(score)
+        print(bag)
+
+    score = score * 2
+    inner()
+    print(score)
+    print(bag)
+
+outer()
+print(score)
+print(bag)
+# 15,key,map,coin,30,key,map,coin,1,key,map,coin
