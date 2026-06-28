@@ -88,3 +88,20 @@ def add_points():
 add_points()
 print(points)
 # 20,20
+
+# Question 8
+status = "waiting"
+
+def outer():
+    status = "ready"
+
+    def inner():
+        status = "running"
+        print(status)
+
+    inner()
+    print(status)
+
+outer()
+print(status)
+# running , ready,weiting
