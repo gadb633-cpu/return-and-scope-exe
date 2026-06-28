@@ -25,3 +25,29 @@ show_info()
 print(name)
 print(level)
 # "spy",40,"agent",2
+
+# Question 3
+coins = 20
+
+def mission_reward(coins):
+    coins = coins + 10
+    coins = coins * 2
+    print(coins)
+
+mission_reward(5)
+print(coins)
+# 30,20
+
+# Question 4
+health = 100
+
+def take_damage(damage):
+    health = 100
+    health = health - damage
+    damage = damage + 5
+    print(health)
+    print(damage)
+
+take_damage(30)
+print(health)
+# 100,75,100
