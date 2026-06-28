@@ -105,3 +105,22 @@ def outer():
 outer()
 print(status)
 # running , ready,weiting
+
+# Question 9
+coins = 10
+
+def outer():
+    coins = 5
+
+    def inner():
+        nonlocal coins
+        coins = coins + 3
+        coins = coins * 2
+        print(coins)
+
+    inner()
+    print(coins)
+
+outer()
+print(coins)
+# 16,16,10
