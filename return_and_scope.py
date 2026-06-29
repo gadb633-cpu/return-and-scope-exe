@@ -1,151 +1,208 @@
-# Question 1
-score = 10
+# # Question 1
+# score = 10
 
-def update_score():
-    score = 5
-    score = score + 3
-    print(score)
+# def update_score():
+#     score = 5
+#     score = score + 3
+#     print(score)
 
-update_score()
-print(score)
-# 8,10
+# update_score()
+# print(score)
+# # 8,10
 
-# Question 2
-name = "Agent"
-level = 2
+# # Question 2
+# name = "Agent"
+# level = 2
 
-def show_info():
-    name = "Spy"
-    level = 4
-    power = level * 10
-    print(name)
-    print(power)
+# def show_info():
+#     name = "Spy"
+#     level = 4
+#     power = level * 10
+#     print(name)
+#     print(power)
 
-show_info()
-print(name)
-print(level)
-# "spy",40,"agent",2
+# show_info()
+# print(name)
+# print(level)
+# # "spy",40,"agent",2
 
-# Question 3
-coins = 20
+# # Question 3
+# coins = 20
 
-def mission_reward(coins):
-    coins = coins + 10
-    coins = coins * 2
-    print(coins)
+# def mission_reward(coins):
+#     coins = coins + 10
+#     coins = coins * 2
+#     print(coins)
 
-mission_reward(5)
-print(coins)
-# 30,20
+# mission_reward(5)
+# print(coins)
+# # 30,20
 
-# Question 4
-health = 100
+# # Question 4
+# health = 100
 
-def take_damage(damage):
-    health = 100
-    health = health - damage
-    damage = damage + 5
-    print(health)
-    print(damage)
+# def take_damage(damage):
+#     health = 100
+#     health = health - damage
+#     damage = damage + 5
+#     print(health)
+#     print(damage)
 
-take_damage(30)
-print(health)
-# 70,35,100
+# take_damage(30)
+# print(health)
+# # 70,35,100
 
-# Question 5
-items = ["map", "key"]
+# # Question 5
+# items = ["map", "key"]
 
-def add_item():
-    items.append("torch")
-    items.append("coin")
-    print(items)
+# def add_item():
+#     items.append("torch")
+#     items.append("coin")
+#     print(items)
 
-add_item()
-print(items)
-# map,key,torch,coin,map,key,torch,coin
+# add_item()
+# print(items)
+# # map,key,torch,coin,map,key,torch,coin
 
-# Question 6
-items = ["map", "key"]
+# # Question 6
+# items = ["map", "key"]
 
-def replace_items():
-    items = ["potion"]
-    items.append("shield")
-    print(items)
+# def replace_items():
+#     items = ["potion"]
+#     items.append("shield")
+#     print(items)
 
-replace_items()
-print(items)
-# potion,shield,map,key
+# replace_items()
+# print(items)
+# # potion,shield,map,key
 
-# Question 7
-points = 3
+# # Question 7
+# points = 3
 
-def add_points():
-    global points
-    points = points + 7
-    points = points * 2
-    print(points)
+# def add_points():
+#     global points
+#     points = points + 7
+#     points = points * 2
+#     print(points)
 
-add_points()
-print(points)
-# 20,20
+# add_points()
+# print(points)
+# # 20,20
 
-# Question 8
-status = "waiting"
+# # Question 8
+# status = "waiting"
 
-def outer():
-    status = "ready"
+# def outer():
+#     status = "ready"
 
-    def inner():
-        status = "running"
-        print(status)
+#     def inner():
+#         status = "running"
+#         print(status)
 
-    inner()
-    print(status)
+#     inner()
+#     print(status)
 
-outer()
-print(status)
-# running , ready,weiting
+# outer()
+# print(status)
+# # running , ready,weiting
 
-# Question 9
-coins = 10
+# # Question 9
+# coins = 10
 
-def outer():
-    coins = 5
+# def outer():
+#     coins = 5
 
-    def inner():
-        nonlocal coins
-        coins = coins + 3
-        coins = coins * 2
-        print(coins)
+#     def inner():
+#         nonlocal coins
+#         coins = coins + 3
+#         coins = coins * 2
+#         print(coins)
 
-    inner()
-    print(coins)
+#     inner()
+#     print(coins)
 
-outer()
-print(coins)
-# 16,16,10
+# outer()
+# print(coins)
+# # 16,16,10
 
-# Question 10
-score = 1
-bag = ["key"]
+# # Question 10
+# score = 1
+# bag = ["key"]
 
-def outer():
-    score = 10
-    bag.append("map")
+# def outer():
+#     score = 10
+#     bag.append("map")
 
-    def inner():
-        nonlocal score
-        score = score + 5
-        bag.append("coin")
-        print(score)
-        print(bag)
+#     def inner():
+#         nonlocal score
+#         score = score + 5
+#         bag.append("coin")
+#         print(score)
+#         print(bag)
 
-    score = score * 2
-    inner()
-    print(score)
-    print(bag)
+#     score = score * 2
+#     inner()
+#     print(score)
+#     print(bag)
 
-outer()
-print(score)
-print(bag)
-# 15,key,map,coin,30,key,map,coin,1,key,map,coin
+# outer()
+# print(score)
+# print(bag)
+# # 25,key,map,coin,25,key,map,coin,1,key,map,coin
+
+# 1. Mission Distance Converter
+def receives_distance_meters_to_centimeters(meters):
+    meters_to_centimeters = meters*100
+    return meters_to_centimeters
+
+
+def return_message_of_centimeters(centimeters_value):
+    message =  f"Robot moved {centimeters_value} centimeters"
+    return message
+
+def meters_and_centimeters_distance(meters):
+
+    centimeters = receives_distance_meters_to_centimeters(5)
+    print(centimeters)
+    message_of_centimeters = return_message_of_centimeters(centimeters)
+    print(message_of_centimeters)
+meters_and_centimeters_distance(5)
+
+# 2. Simple Price Calculator
+def adding_delivery_to_price(product_price):
+    return product_price + 10
+
+def multiplying_it_by_2(new_price):
+    return new_price*2
+
+def final_price(product_price):
+    product_price_and_delivery = adding_delivery_to_price(product_price)
+    multiplying = multiplying_it_by_2(product_price_and_delivery)
+    print(multiplying)
+final_price(680) 
+
+# 3. Name Formatter
+def conect_first_and_last_names(first_name,last_name):
+    return first_name + " " + last_name
+
+def change_full_name_to_uppercase(full_name_with_uppercase):
+    return full_name_with_uppercase.upper()
+
+def prepares_a_user_name(first_name,last_name):
+    full_name=conect_first_and_last_names(first_name,last_name)
+    uppercase = change_full_name_to_uppercase(full_name)
+    print(uppercase)
+prepares_a_user_name("gad","biton")
+
+# 4. Temperature Report
+def costing_Celsius_to_Fahrenheit(temperature_in_Celsius):
+    return temperature_in_Celsius*9/5+32
+
+def message_with_result(temperature_in_Fahrenheit):
+    return f"the temperature in Fahrenheit is {temperature_in_Fahrenheit} costing from celsius"
+
+def temperature_report(temperature_in_Celsius):
+    costing = costing_Celsius_to_Fahrenheit(temperature_in_Celsius)
+    sentens = message_with_result(costing)
+    print(sentens)
+temperature_report(68)    
