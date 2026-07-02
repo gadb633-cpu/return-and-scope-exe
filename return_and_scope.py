@@ -206,3 +206,54 @@ def temperature_report(temperature_in_Celsius):
     sentens = message_with_result(costing)
     print(sentens)
 temperature_report(68)    
+
+# 5. Game Health Calculator
+def health_after_damage(health,damaged):
+    return health - damaged
+
+def health_after_healing(health_after_damage_,add_healing):
+    return health_after_damage_ + add_healing
+
+def calculates_player_health(player_health,demaged,add_healing):
+    health_after_damage_ = health_after_damage(player_health,demaged)
+    return health_after_healing(health_after_damage_,add_healing)
+
+print(calculates_player_health(100,30,20))
+
+# 6. Shopping Bag Total
+def calculate_prices_of_3_products(Pen_price, Notebook_price, Pencil_price):
+    return Pen_price + Notebook_price + Pencil_price
+
+def total_after_discount(total_price):
+    return total_price * 0.80
+
+def final_price(Pen_price, Notebook_price, Pencil_price):
+    total_price = calculate_prices_of_3_products(Pen_price, Notebook_price, Pencil_price)
+    final_price = total_after_discount(total_price)
+    return f"final price is: {final_price}"
+
+print(final_price(100,100,200))
+
+# 7. Password Cleaner
+def lowers_profits(password):
+    return password.strip()
+
+def return_length_password(cleaned_password):
+    return len(cleaned_password)
+
+def check_length(length_password):
+    if length_password <= 8:
+        return True
+    else:
+        return False
+    
+def return_result(password):
+    clean_password = lowers_profits(password)
+    length_password = return_length_password(clean_password)
+    massage = check_length(length_password)
+    return massage
+print(return_result("check test"))
+
+
+
+
