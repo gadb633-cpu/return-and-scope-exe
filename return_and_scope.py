@@ -254,6 +254,29 @@ def return_result(password):
     return massage
 print(return_result("check test"))
 
+# 8. Student Grade Bonus
+def adding_5_bonus_points(grade):
+    return grade + 5
+
+def grade_multiplied(new_grade):
+    return new_grade * 1.1
+
+def result_grade(final_grade):
+    if final_grade < 100:
+        return final_grade
+    else:
+        return 100
+def massage(grade):
+    new_grade = adding_5_bonus_points(grade)
+    final_grade = grade_multiplied(new_grade)
+    massage = result_grade(final_grade)
+    return massage
+
+print(massage(80))
+
+
+
+
 
 
 
