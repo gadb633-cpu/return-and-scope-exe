@@ -287,8 +287,26 @@ def result_and_massage(sentence):
     return f"The letter a appears {how_many_times_a} times"
 print(result_and_massage("GAD AADVC"))
 
+# 10. Inventory Value
+def item_price_add_amount(item_price,amount):
+    return item_price * amount
 
+def total_price_after_ubtracting_storage_cost(total_price):
+    return total_price - 15
 
+def final_value(final_price):
+    if final_price < 100:
+        return final_price
+    else:
+        return 100
+
+def result_value(item_price,amount):
+    total_value = item_price_add_amount(item_price,amount)
+    final_items_price = total_price_after_ubtracting_storage_cost(total_value)
+    result = final_value(final_items_price)
+    return result
+
+print(result_value(20,8))
 
 
 
