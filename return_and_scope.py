@@ -274,6 +274,21 @@ def massage(grade):
 
 print(massage(80))
 
+# 9. Text Analyzer
+def sentence_in_lowercase(sentence):
+    return sentence.lower()
+
+def check_how_many_times_for_wor(lowercase_sentence):
+    return lowercase_sentence.count("a")
+
+def result_and_massage(sentence):
+    lowercase_sentence = sentence_in_lowercase(sentence)
+    how_many_times_a = check_how_many_times_for_wor(lowercase_sentence)
+    return f"The letter a appears {how_many_times_a} times"
+print(result_and_massage("GAD AADVC"))
+
+
+
 
 
 
